@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+
+header {
+    background-color: rgb(112, 9, 9);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 45%; 
+    padding: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+    /* Cambia el color al pasar el ratón sobre los enlaces */
+}
+
+
+
+
+/* Upload */
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.upload__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.upload__container--image,
+.upload__container--title,
+.upload__container--button {
+    margin-bottom: 10px;
+}
+
+.upload__container--image input[type="file"],
+.upload__container--title input[type="text"],
+.upload__container--button button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.upload__container--button button {
+    background-color: rgb(20, 5, 157);
+    color: white;
+    cursor: pointer;
+}
+
+.upload__container--button button:hover {
+    background-color: #255403;
+}
+
+/* Cards */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+.card img {
+    width: 90%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    color:#fff
+}
+
+.card p {
+    font-size: 14px;
+    margin: 10px;
+    color: #777;
+}
+
+/*Button*/
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #c4001a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e60023;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    gap: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+.center {
+    text-align: center;
+    margin: 30px auto;
+}

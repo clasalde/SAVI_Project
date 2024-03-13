@@ -1,0 +1,10 @@
+<h1 class="center">Planes Disponibles</h1>
+<div class="flex-row">
+    {{#each planes}}
+        <div class="card">
+            <img src={{this.path}}>
+            <h3> {{this.marca}} </h3>
+            <a href="" class="btn">Eliminar</a>
+        </div>
+    {{/each}}
+</div>
