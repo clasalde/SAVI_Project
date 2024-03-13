@@ -1,11 +1,12 @@
 import { Router } from "express";
 import PlanesModel from "../models/planes.model.js";
+import { promises as fs } from "fs";
 const router = Router();
 
 //Obtengo el listado de todos los planes
 router.get("/planes", async (req, res) => {
     const planes = await PlanesModel.find();
-    
+
     //para evitar restriccion de Handlebars
     const nuevoArrayPlanes = planes.map(plan => {
         return {
@@ -16,6 +17,14 @@ router.get("/planes", async (req, res) => {
         }
     })
     res.render("planes", { planes: nuevoArrayPlanes });
+})
+
+//Ruta Delete
+router.get("/plan/:id/delete", async (req, res) => {
+    const {id} = req.params;
+    const plan = await PlanesModel.findByIdAndDelete(id);
+    await fs.unlink("./src/public" + plan.path);
+    res.redirect("/planes");
 })
 
 //Muestro el formulario de carga
@@ -34,7 +43,7 @@ router.post("/upload", async (req, res) => {
         await nuevoPlan.save();
 
         res.redirect("/");
-        
+
     } catch (error) {
         res.status(500).json({ message: "Error en el servidor al dar de alta un nuevo plan" });
         console.log(error);
