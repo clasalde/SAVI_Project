@@ -1,16 +1,70 @@
 <div class="upload">
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <div class="upload__container">
-            <div class="upload__container--title">
-                <input type="file" name="image" unique="false">
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="formType">
+        <div class="flex-column">
+            <div class="flex">
+                <div class="flex-column">
+                    <div class="upload__container--title">
+                        <input type="text" name="marca" placeholder="Marca">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="modelo" placeholder="Modelo">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="version" placeholder="Versión">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="precio" placeholder="Precio">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSuscripcion" placeholder="Monto para Suscribir">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento1" placeholder="Segmento 1">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento2" placeholder="Segmento 2">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento3" placeholder="Segmento 3">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento4" placeholder="Segmento 4">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento5" placeholder="Segmento 5">
+                    </div>
+                    <div class="upload__container--title">
+                        <input type="text" name="segmento6" placeholder="Segmento 6">
+                    </div>
+                </div>
+                <div class="flex-column">
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento1" placeholder="Monto Segmento 1">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento2" placeholder="Monto Segmento 2">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento3" placeholder="Monto Segmento 3">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento4" placeholder="Monto Segmento 4">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento5" placeholder="Monto Segmento 5">
+                    </div>
+                    <div class="upload__container--number">
+                        <input type="number" name="montoSegmento6" placeholder="Monto Segmento 6">
+                    </div>
+                </div>
             </div>
 
-            <div class="upload__container--title">
-                <input type="text" name="marca" placeholder="Marca">
+            <div class="upload__container--file">
+                <input type="file" name="image" unique="false" class="select">
             </div>
 
             <div class="upload__container--button">
-                <button class="btn">Publicar</button>
+                <button class="btn center">Publicar</button>
             </div>
         </div>
     </form>

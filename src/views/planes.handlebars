@@ -1,10 +1,26 @@
 <h1 class="center">Planes Disponibles</h1>
 <div class="flex-row">
     {{#each planes}}
-        <div class="card">
-            <img src={{this.path}}>
-            <h3> {{this.marca}} </h3>
-            <a href="/plan/{{this.id}}/delete" class="btn">Eliminar</a>
-        </div>
+    <div class="card">
+        <img src={{this.path}}>
+        <h3>{{this.marca}}</h3>
+        <h3>{{this.modelo}}</h3>
+        <h4>{{this.version}}</h4>
+        <p>{{this.precio}}</p>
+        <p>{{this.montoSuscripcion}}</p>
+        <p>{{this.segmento1}}</p>
+        <p>{{this.segmento2}}</p>
+        <p>{{this.segmento3}}</p>
+        <p>{{this.segmento4}}</p>
+        <p>{{this.segmento5}}</p>
+        <p>{{this.segmento6}}</p>
+        <p>{{this.montoSegmento1}}</p>
+        <p>{{this.montoSegmento2}}</p>
+        <p>{{this.montoSegmento3}}</p>
+        <p>{{this.montoSegmento4}}</p>
+        <p>{{this.montoSegmento5}}</p>
+        <p>{{this.montoSegmento6}}</p>
+        <a href="/plan/{{this.id}}/delete" class="btn">Eliminar</a>
+    </div>
     {{/each}}
 </div>

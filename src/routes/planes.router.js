@@ -1,6 +1,5 @@
 import { Router } from "express";
 import PlanesModel from "../models/planes.model.js";
-import { promises as fs } from "fs";
 const router = Router();
 
 //Obtengo el listado de todos los planes
@@ -12,18 +11,34 @@ router.get("/planes", async (req, res) => {
         return {
             id: plan._id,
             marca: plan.marca,
+            modelo: plan.modelo,
+            version: plan.version,
+            precio: plan.precio,
+            montoSuscripcion: plan.montoSuscripcion,
+            segmento_1: plan.segmento_1,
+            segmento_2: plan.segmento_2,
+            segmento_3: plan.segmento_3,
+            segmento_4: plan.segmento_4,
+            segmento_5: plan.segmento_5,
+            segmento_6: plan.segmento_6,
+            montoSegmento_1: plan.montoSegmento_1,
+            montoSegmento_2: plan.montoSegmento_2,
+            montoSegmento_3: plan.montoSegmento_3,
+            montoSegmento_4: plan.montoSegmento_4,
+            montoSegmento_5: plan.montoSegmento_5,
+            montoSegmento_6: plan.montoSegmento_6,
             filename: plan.filename,
             path: plan.path
         }
     })
     res.render("planes", { planes: nuevoArrayPlanes });
+    console.log(nuevoArrayPlanes);
 })
 
 //Ruta Delete
 router.get("/plan/:id/delete", async (req, res) => {
-    const {id} = req.params;
-    const plan = await PlanesModel.findByIdAndDelete(id);
-    await fs.unlink("./src/public" + plan.path);
+    const { id } = req.params;
+    await PlanesModel.findByIdAndDelete(id);
     res.redirect("/planes");
 })
 

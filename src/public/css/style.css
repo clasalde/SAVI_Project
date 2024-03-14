@@ -1,13 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
 }
 
 header {
-    background-color: rgb(112, 9, 9);
-    color: white;
+    background-color: #d71200;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -15,7 +14,7 @@ header {
 }
 
 .logo {
-    width: 45%; 
+    width: 45%;
     padding: 5px;
 }
 
@@ -43,7 +42,9 @@ nav a:hover {
     /* Cambia el color al pasar el ratón sobre los enlaces */
 }
 
-
+.headerTop {
+    height: 7vh;
+}
 
 
 /* Upload */
@@ -52,7 +53,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .upload__container {
@@ -60,22 +61,23 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f2f2f2;
     border-radius: 5px;
 }
 
-.upload__container--image,
+.upload__container--file,
+.upload__container--number,
 .upload__container--title,
 .upload__container--button {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.upload__container--image input[type="file"],
+.upload__container--file input[type="file"],
+.upload__container--number input[type="number"],
 .upload__container--title input[type="text"],
 .upload__container--button button {
     padding: 10px;
     font-size: 1rem;
-    border: none;
+    border: solid rgb(223, 23, 23) none;
     border-radius: 5px;
 }
 
@@ -97,9 +99,8 @@ nav a:hover {
     align-items: center;
     width: 300px;
     margin: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    background-color: #000000;
 }
 
 .card img {
@@ -109,11 +110,11 @@ nav a:hover {
     border-radius: 5px 5px 0 0;
 }
 
-.card h3 {
+.card h3,
+h4 {
     font-size: 18px;
     font-weight: bold;
     margin: 10px;
-    color:#fff
 }
 
 .card p {
@@ -127,8 +128,8 @@ nav a:hover {
 .btn {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #c4001a;
-    color: #fff;
+    background-color: #d71200;
+    color: white;
     border: none;
     border-radius: 4px;
     font-size: 14px;
@@ -138,7 +139,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #e60023;
+    background-color: #d71200;
 }
 
 .flex-row {
@@ -149,11 +150,34 @@ nav a:hover {
     gap: 10px;
 }
 
-h1 {
-    color: white;
-}
-
 .center {
     text-align: center;
     margin: 30px auto;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.formType {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.center {
+    display: flex;
+    margin: auto;
 }
